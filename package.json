@@ -15,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/Arturo-Castro/Pokedex-project/issues"
   },
-  "homepage": "https://github.com/Arturo-Castro/Pokedex-project#readme",
-  "dependencies": {
-    "bootstrap": "^5.1.3"
-  }
+  "homepage": "https://github.com/Arturo-Castro/Pokedex-project#readme"
 }

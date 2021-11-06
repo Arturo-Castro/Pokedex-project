@@ -51,7 +51,7 @@ document.querySelectorAll('button').forEach($button => {
                 document.querySelectorAll('p').forEach($p => {
                     $p.textContent = '';
                 })
-                document.querySelectorAll('img').forEach($img => {
+                document.querySelectorAll('.grid img').forEach($img => {
                     $img.src = '';
                 })
                 document.querySelectorAll('.card').forEach(($card, index) => {
@@ -92,3 +92,7 @@ document.querySelectorAll('.card').forEach($card => {
             })
     }
 })
+
+const TYPES_OF_POKEMONS = {
+
+}

@@ -5,7 +5,10 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Pokedex!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -279,10 +282,10 @@
             </div>
         </section>
         <div class="pagination-button-container">
-            <button>Start</button>
-            <button>Previous</button>
-            <button>Next</button>
-            <button>Last</button>
+            <button class="hidden" id="start-button">Start</button>
+            <button class="hidden" id="previous-button">Previous</button>
+            <button id="next-button">Next</button>
+            <button id="last-button">Last</button>
         </div>
         <input type="checkbox" id="modal-button">
         <label for="modal-button"></label>
@@ -304,6 +307,9 @@
                 
             </div>
         </div>
+        <footer>
+            <h2>Project made by <a href="https://github.com/" target="_blank">Arturo Castro</a></h2>
+        </footer>
     </div>
    
     

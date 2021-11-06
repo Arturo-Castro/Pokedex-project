@@ -39,6 +39,7 @@ body{
 .card{
     background-color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .img-container{
@@ -71,7 +72,7 @@ body{
 }
 
 .modal-window{
-    width: 315px;
+    width: clamp(220px, 40%, 315px);
     height: 370px;
     margin: auto;
     background: #fff;
@@ -130,6 +131,8 @@ body{
     margin: 7px;
     color: white;
     font-weight: 700;
+    font-family: 'Bungee', cursive;
+    font-family: 'Nothing You Could Do', cursive;
 }
 
 .name-container{
@@ -137,13 +140,46 @@ body{
     justify-content: center;
     margin-top: 10px;
     color: grey;
+    pointer-events: none;
 }
 
 .pagination-button-container{
-    margin-top: 15px;
+    background-color: white; 
+    margin-top: 70px;
+    border-radius: 4px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
 }
 
 .logo-container img{
     width: 310px;
 }
 
+h2{
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+button{
+    all: unset;
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1), 0px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Bangers', cursive;
+}
+
+button:hover{
+    background-color: royalblue;
+    color: white;
+    
+}
+
+p{
+    font-family: 'Lobster', cursive;
+}

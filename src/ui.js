@@ -13,7 +13,7 @@ export function fillCardNames(pokemonList) {
 
 export function placeCardImages() {
   document.querySelectorAll('.card').forEach(async ($card, index) => {
-    const pokemon = await obtainPokemon(index + 1 + offset);
+    const pokemon = await obtainPokemon(index + 1 + offset); // invert dependency
     $card.querySelector(`#img-${index}`).src = pokemon.sprites.front_default;
   });
 }
@@ -26,7 +26,7 @@ function removeHiddenClasses() {
   }
 }
 
-function setOffsetAndPageNumber(clickedButton) {
+function setOffsetAndPageNumber(clickedButton) { // Goes in utilities folder
   if (clickedButton.textContent === 'Start') {
     offset = 0;
     CURRENT_PAGE_NUMBER = 1;
@@ -73,7 +73,7 @@ function hideExcessCards() {
   });
 }
 
-export function managePagination() {
+export function managePagination() { // Goes in main file
   document.querySelectorAll('button').forEach(($button) => {
     $button.onclick = async (e) => {
       removeHiddenClasses();
@@ -96,8 +96,8 @@ export function fillModalWithData() {
   document.querySelectorAll('.card').forEach(($card) => {
     $card.onclick = async (e) => {
       const pokemonName = e.target.querySelector('p').textContent;
-      openModalWindow();
-      const pokemon = await obtainPokemon(pokemonName);
+      openModalWindow(); // invert dependecy
+      const pokemon = await obtainPokemon(pokemonName); // pass as argument
       document.querySelector('#modal-img').src = pokemon.sprites.front_default;
       document.querySelector('#name').textContent = `Name: ${pokemon.forms[0].name}`;
       document.querySelector('#id').textContent = `Id: ${pokemon.id}`;

@@ -4,8 +4,8 @@ export function obtainPokemonList(limit = 33, offset = 0) {
     .then((responseJson) => responseJson.results);
 }
 
-export function obtainPokemon(pokemonIdOrName = 1) {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonIdOrName}`)
+export function obtainPokemon(id) {
+  return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response) => response.json())
     .then((responseJson) => responseJson);
 }

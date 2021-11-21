@@ -43,9 +43,6 @@ export function clearCardsContent() {
   document.querySelectorAll('p').forEach(($p) => {
     $p.textContent = '';
   });
-/*   document.querySelectorAll('.grid img').forEach(($img) => {
-    $img.src = '';
-  }); */
 }
 
 export function hideExcessCards() {

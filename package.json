@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --collect-coverage",
+    "test:dev": "jest --watch",
+    "test:ui": "run-p serve test:cypress",
+    "test:ui:dev": "run-p serve test:cypress:dev",
+    "test:cypress": "cypress run",
+    "test:cypress:dev": "cypress open",
+    "serve": "http-server -c-1"
   },
   "repository": {
     "type": "git",
@@ -17,8 +23,17 @@
   },
   "homepage": "https://github.com/Arturo-Castro/Pokedex-project#readme",
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "babel-jest": "^27.3.1",
+    "cypress": "^9.0.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3"
+    "eslint-plugin-import": "^2.25.3",
+    "jest": "^27.3.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.3"
   }
 }

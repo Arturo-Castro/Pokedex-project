@@ -4,7 +4,6 @@ import {
   removeHiddenClasses,
   manageButtonsDisplay,
   clearCardsContent,
-  hideExcessCards,
   fillModalWithData,
   openModalWindow,
 } from './Ui/ui.js';
@@ -29,7 +28,7 @@ async function manageContent(page) {
     const pokemon = await obtainPokemon(pokemonName);
     fillModalWithData(pokemon, openModalWindow);
   });
-  hideExcessCards();
+
 }
 
 export default async function initialize() {

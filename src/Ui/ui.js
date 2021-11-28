@@ -15,7 +15,7 @@ export function removeHiddenClasses() {
       $div.classList.remove('hidden');
     });
   }
-}
+} 
 
 export function manageButtonsDisplay(
   pageNumber,
@@ -42,14 +42,6 @@ export function manageButtonsDisplay(
 export function clearCardsContent() {
   document.querySelectorAll('p').forEach(($p) => {
     $p.textContent = '';
-  });
-}
-
-export function hideExcessCards() {
-  document.querySelectorAll('.card').forEach(($div) => {
-    if ($div.querySelector('p') === '' && $div.querySelector('img').src === '') {
-      $div.classList.add('hidden');
-    }
   });
 }
 

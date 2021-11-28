@@ -22,12 +22,12 @@ export function obtainPokemon(id) {
 }
 
 export function obtainPokemonList(offset = 0, limit = POKEMONS_PER_PAGE) {
-  const pokemones = JSON.parse(localStorage.getItem(obtainPokemonKeys(offset, limit)));
-  if (pokemones === null) {
+  const pokemons = JSON.parse(localStorage.getItem(obtainPokemonKeys(offset, limit)));
+  if (pokemons === null) {
     throw new Error(`Pokemon list with offset ${offset} and limit ${limit} not found`);
   }
 
-  return pokemones;
+  return pokemons;
 }
 
 export function savePokemon(id, pokemon) {
